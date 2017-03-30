@@ -50,6 +50,7 @@ Exports tracking data to the ./exports directory in csv format.
 * npm test -> run tests
 * ./cli.js -> run cli without arguments
 * ./cli.js -d YYYY-MM-DD -> run cli with date argument
+* ./cli.js --help or -h -> cli usage and options
 
 ---
 
