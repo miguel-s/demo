@@ -1,0 +1,22 @@
+{
+  "name": "clt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clt.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "author": "Miguel Serrano",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "dotenv": "^4.0.0",
+    "json2csv": "^3.7.3",
+    "moment": "^2.18.1",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

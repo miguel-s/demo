@@ -1,0 +1,31 @@
+{
+  "name": "endpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "start": "node server.js",
+    "dev": "./node_modules/.bin/nodemon server.js",
+    "seed": "node ./lib/seed.js",
+    "stress": "./node_modules/.bin/artillery run artillery.yml"
+  },
+  "author": "Miguel Serrano",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "artillery": "^1.5.3",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
