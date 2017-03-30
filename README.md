@@ -36,6 +36,8 @@ http://HOST:PORT/track?eventtype=EVENT_TYPE_VALUE&ids=COMMA_SEPARATED_LIST_OF_ID
 ---
 
 ## CLI
+Exports tracking data to the ./exports directory in csv format.
+
 ### Technologies
 * Server: Node.js
 * Database: SQLite3
