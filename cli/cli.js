@@ -81,14 +81,15 @@ function convertCsv(args = {}) {
 function exportCsv(args = {}) {
   logMessage('Exporting CSV...');
 
+  const dir = './exports';
   const filename = `export_track_${moment(args.date).format('YYYY-MM-DD')}.csv`;
-  const filepath = `./exports/${filename}`;
+  const filepath = `${dir}/${filename}`;
 
   return new Promise((resolve, reject) => {
     if (!args.date) reject('Error missing date.');
     if (!args.csv) reject('Error missing csv.');
 
-    fs.mkdir('./exports', (err) => {
+    fs.mkdir(dir, (err) => {
       if (err.code !== 'EEXIST') reject('Error creating exports directory.');
       fs.writeFile(filepath, args.csv, (err) => {
         if (err) reject('Error writing file.');

@@ -22,9 +22,12 @@ function cleanExportsFolder(done) {
   const dir = './exports';
 
   try {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      fs.unlinkSync(path.join(dir, file));
+    // fs.exists (async) is deprecated
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir);
+      for (const file of files) {
+        fs.unlinkSync(path.join(dir, file));
+      }
     }
     done();
   } catch (err) {
